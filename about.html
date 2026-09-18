@@ -675,73 +675,17 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     box-shadow: 0 15px 35px rgba(0,0,0,.08);
 }
 
-/* ---- Leader image wrapper (for glow effect) ---- */
-.pccare-about .leader-img-wrap {
-    position: relative;
-    display: block;
+.pccare-about .leader img {
     width: 100%;
     border-radius: clamp(14px, 2vw, 20px);
-    isolation: isolate;
-}
-
-/* Soft breathing halo behind the image */
-.pccare-about .leader-img-wrap::before {
-    content: '';
-    position: absolute;
-    inset: -18px;
-    border-radius: inherit;
-    background: radial-gradient(
-        circle at 50% 50%,
-        rgba(93,218,255,.55),
-        rgba(11,110,168,.30) 45%,
-        transparent 72%
-    );
-    filter: blur(26px);
-    opacity: 0;
-    z-index: 0;
-    transition: opacity .55s ease;
-    pointer-events: none;
-}
-
-.pccare-about .leader-img-wrap:hover::before {
-    opacity: 1;
-    animation: pccare-glow-pulse 2.4s ease-in-out infinite;
-}
-
-.pccare-about .leader-img-wrap img {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    border-radius: inherit;
-    object-fit: cover;
+    transition: .5s;
     box-shadow: 0 15px 30px rgba(0,0,0,.15);
-    transition:
-        transform .55s cubic-bezier(.22,.61,.36,1),
-        box-shadow .55s cubic-bezier(.22,.61,.36,1),
-        filter .55s ease;
-    will-change: transform, box-shadow;
+    object-fit: cover;
 }
 
-.pccare-about .leader-img-wrap:hover img {
-    transform: scale(1.035) translateY(-4px);
-    filter: brightness(1.05) saturate(1.05);
-    box-shadow:
-        0 0 0 2px rgba(93,218,255,.55),
-        0 0 18px rgba(93,218,255,.75),
-        0 0 38px rgba(11,110,168,.65),
-        0 0 70px rgba(11,110,168,.45),
-        0 22px 45px rgba(0,0,0,.22);
-}
-
-@keyframes pccare-glow-pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: .85;
-    }
-    50% {
-        transform: scale(1.06);
-        opacity: 1;
-    }
+.pccare-about .leader img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 25px rgba(11,110,168,.4), 0 0 50px rgba(11,110,168,.2);
 }
 
 .pccare-about .leader h3 {
@@ -857,7 +801,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
         gap: 35px;
         text-align: center;
     }
-    .pccare-about .leader-img-wrap {
+    .pccare-about .leader img {
         max-width: 360px;
         margin: 0 auto;
     }
@@ -944,7 +888,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
         padding: 26px 20px;
         border-radius: 16px;
     }
-    .pccare-about .leader-img-wrap {
+    .pccare-about .leader img {
         max-width: 280px;
     }
     .pccare-about .leader h3 {
@@ -1079,9 +1023,6 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     transform: translateY(0);
 }
 
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 @media (prefers-reduced-motion: reduce) {
     .pccare-about .stats .stat-counter {
         transition: none;
@@ -1090,11 +1031,6 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     .pccare-about .project-slide,
     .pccare-about .project-slide img {
         transition: none;
-    }
-    .pccare-about .leader-img-wrap::before,
-    .pccare-about .leader-img-wrap img {
-        transition: none;
-        animation: none;
     }
 }
 </style>
@@ -1265,10 +1201,8 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
         <h2>Meet Our Leader</h2>
     </div>
     <div class="leader">
-        <div class="leader-img-wrap">
-            <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/Leader.jpeg"
-                 alt="Mr. Prakash Pagare" loading="lazy" decoding="async">
-        </div>
+        <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/Leader.jpeg"
+             alt="Mr. Prakash Pagare" loading="lazy" decoding="async">
         <div>
             <h3>Mr. Prakash Pagare</h3>
             <h4>Managing Director</h4>
