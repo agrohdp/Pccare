@@ -1,0 +1,8 @@
+/* Exact paths to the original project images */
+.pc-care-slide:nth-child(1) { background-image: url('../images/21.jpg') !important; }
+.pc-care-slide:nth-child(2) { background-image: url('../images/55.jpg') !important; }
+.pc-care-slide:nth-child(3) { background-image: url('../images/1.png') !important; }
+.pc-care-slide:nth-child(4) { background-image: url('../images/2.png') !important; }
+.pc-care-slide:nth-child(5) { background-image: url('../images/3.png') !important; }
+.pc-care-slide:nth-child(6) { background-image: url('../images/4.png') !important; }
+.pc-care-slide { background-repeat:no-repeat!important; background-size:cover!important; background-position:center center!important; }

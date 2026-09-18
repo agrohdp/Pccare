@@ -1,0 +1,34 @@
+
+#imHeader_pluginAppObj_08 {
+	width: 100%;
+}
+#imHeader_pluginAppObj_08 .cd-headline {
+	display: block;
+	font-family: 'Quicksand';
+	font-size: calc(18px - max(18px - var(--min-text-size), 0pt) * var(--font-size-factor)) ;
+	color: rgba(0, 48, 191, 1);
+	font-style: normal;
+	font-weight: normal;
+}
+
+#imHeader_pluginAppObj_08 .cd-headline b,
+#imHeader_pluginAppObj_08 .cd-headline i,
+#imHeader_pluginAppObj_08 .cd-headline em {
+	
+	font-family: 'Quicksand';
+	font-size: calc(18px - max(18px - var(--min-text-size), 0pt) * var(--font-size-factor)) ;
+	color: rgba(0, 48, 191, 1);
+	font-style: normal !important;
+	font-weight: normal;
+}
+
+/* Loading bar color */
+#imHeader_pluginAppObj_08 .cd-headline.loading-bar .cd-words-wrapper::after {
+	background-color: rgba(0, 48, 191, 1);
+}
+
+#imHeader_pluginAppObj_08 .cd-intro {
+	text-align: center; ;
+}
+
+

@@ -1,0 +1,51 @@
+#pluginAppObj_48 {
+    width: 100%;
+}
+
+#pluginAppObj_48 .container {
+	position: relative;
+	font-size: 0;
+	margin: 0 auto;
+	-ms-touch-action: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	width: 100%;
+	
+}
+#pluginAppObj_48 .container:hover { cursor: move; }
+#pluginAppObj_48 .container img { 
+	width: 100%;
+	height: auto;
+}
+#pluginAppObj_48 .container .img2 {
+	position: absolute;
+	top: 0; left: 0;
+}
+#pluginAppObj_48 .container .hover.img2, #pluginAppObj_48 .container .slide.img2 {
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+}
+#pluginAppObj_48 .container .fade.img2 {
+	opacity: 0.5;
+}
+#pluginAppObj_48 .container .border {
+	position: absolute;
+	top: 0; left: 50%; height: 100%; width: 1px;
+	background-color: #ccc;
+	box-shadow: 0 0 1px #888;
+}
+#pluginAppObj_48 .handle {
+	position: absolute;
+	cursor: move;
+	
+	height: 20px;
+	width: 20px;
+	background-color: #ccc;
+	border: 1px solid #bbb;
+	box-shadow: 0 0 1px #888;
+}
+#pluginAppObj_48 .touch-events .handle {
+	height: 30px;
+	width: 30px;
+}

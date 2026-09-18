@@ -1,0 +1,997 @@
+/* PC Care responsive header/menu refinements.
+   Desktop (992px+) remains untouched. */
+
+@media (max-width: 991px) {
+  html, body { overflow-x: hidden; }
+
+  /* Compact, professional mobile header. */
+  #imPage {
+    grid-template-rows: 145px auto 150px !important;
+  }
+
+  #imHeaderBg {
+    height: 145px !important;
+    background: #f7f7f7 !important;
+    border-bottom: 1px solid rgba(20, 45, 65, .10);
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+  }
+
+  #imHeaderObjects {
+    position: relative !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 145px !important;
+    margin: 0 !important;
+  }
+
+  /* Hamburger: clearly visible in the upper-left corner. */
+  #imHeader_imMenuObject_01_wrapper {
+    position: absolute !important;
+    top: 10px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    right: 12px !important;
+    inset-inline-end: 12px !important;
+    width: 48px !important;
+    height: 48px !important;
+    z-index: 10410 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  #imHeader_imMenuObject_01 .hamburger-button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    width: 48px !important;
+    height: 48px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    border: 0 !important;
+    border-radius: 4px !important;
+    box-shadow: 0 3px 8px rgba(0,0,0,.14);
+  }
+
+  #imHeader_imMenuObject_01 .hamburger-bar {
+    display: block !important;
+    width: 28px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    border-radius: 3px !important;
+  }
+
+  /* Professional mobile header: hamburger at top-left, PC Care logo left,
+     ISO marks centered/slightly right. Desktop styles remain untouched. */
+  #imHeader_imObjectImage_05_wrapper {
+    position: absolute !important;
+    top: 4px !important;
+    left: 58px !important;
+    inset-inline-start: 58px !important;
+    right: auto !important;
+    inset-inline-end: auto !important;
+    width: 190px !important;
+    height: 138px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    z-index: 1004 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    display: block !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 50% !important;
+    width: 190px !important;
+    max-width: none !important;
+    height: auto !important;
+    transform: translateX(-50%) !important;
+    margin: 0 !important;
+    filter: brightness(1.18) contrast(1.08) !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper {
+    position: absolute !important;
+    top: 80px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    right: 20px !important;
+    inset-inline-end: 20px !important;
+    width: 158px !important;
+    height: 48px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    z-index: 1006 !important;
+    transform: none !important;
+    text-align: center !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    display: block !important;
+    width: 158px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 auto !important;
+    clip-path: none !important;
+  }
+
+  /* Keep the existing business text, but give it a deliberate position under
+     the ISO marks instead of letting it collide with the viewport edge. */
+  #imHeader_imTextObject_06_wrapper {
+    position: absolute !important;
+    top: 126px !important;
+    right: 12px !important;
+    inset-inline-end: 12px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    width: 150px !important;
+    height: 18px !important;
+    overflow: hidden !important;
+    z-index: 1005 !important;
+    text-align: center !important;
+  }
+
+  #imHeader_imTextObject_06_wrapper .text-inner {
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+  }
+
+  #imHeader_imTextObject_06_wrapper .fs11lh1-5 {
+    font-size: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  /* Hide only the email line on responsive layouts; keep the desktop navbar and the call line intact. */
+  #imHeader_imTextObject_04_wrapper .text-inner > div:first-child {
+    display: none !important;
+  }
+
+  /* The animated headline is removed from the HTML; this also guards against stale cached markup. */
+  #imHeader_pluginAppObj_08_wrapper,
+  #imHeader_pluginAppObj_08,
+  .cd-headline.push {
+    display: none !important;
+  }
+
+  /* Original X5 opened menu: refined presentation, no second menu system. */
+  #imHeader_imMenuObject_01-menu-opened {
+    position: fixed !important;
+    top: 0 !important;
+    right: 0 !important;
+    inset-inline-end: 0 !important;
+    bottom: 0 !important;
+    width: min(320px, 84vw) !important;
+    max-width: 320px !important;
+    height: 100dvh !important;
+    min-height: 100vh !important;
+    z-index: 10402 !important;
+    background: #fff !important;
+    overflow: hidden !important;
+    box-sizing: border-box !important;
+    box-shadow: -10px 0 30px rgba(0,0,0,.18);
+  }
+
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-background {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: #fff !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-close-button {
+    position: absolute !important;
+    top: 0 !important;
+    right: 0 !important;
+    width: 52px !important;
+    height: 52px !important;
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 30px !important;
+    line-height: 1 !important;
+    z-index: 2 !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened #imHeader_imMenuObject_01_container-menu-opened > ul {
+    position: absolute !important;
+    top: 52px !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: calc(100% - 52px) !important;
+    margin: 0 !important;
+    padding: 8px 0 20px !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    box-sizing: border-box !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li {
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper {
+    position: relative !important;
+    width: 100% !important;
+    height: 68px !important;
+    padding: 0 18px 0 64px !important;
+    display: block !important;
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .label-inner-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+    display: table !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .label {
+    display: table-cell !important;
+    vertical-align: middle !important;
+    width: 100% !important;
+    height: 100% !important;
+    font-size: clamp(18px, 5vw, 22px) !important;
+    line-height: 1.2 !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon {
+    position: absolute !important;
+    top: 50% !important;
+    left: 14px !important;
+    inset-inline-start: 14px !important;
+    width: 34px !important;
+    height: 34px !important;
+    max-width: 34px !important;
+    max-height: 34px !important;
+    object-fit: contain !important;
+    transform: translateY(-50%) !important;
+    margin: 0 !important;
+    z-index: 1 !important;
+  }
+
+  #imPageExtContainer:after { z-index: 10401 !important; }
+}
+
+@media (max-width: 480px) {
+  #imPage { grid-template-rows: 145px auto 150px !important; }
+  #imHeaderBg, #imHeaderObjects { height: 145px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 13px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    right: 11px !important;
+    inset-inline-end: 11px !important;
+    width: 44px !important;
+    height: 44px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 44px !important; height: 44px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 25px !important; }
+
+  #imHeader_imObjectImage_05_wrapper {
+    top: 1px !important;
+    left: 54px !important;
+    inset-inline-start: 54px !important;
+    width: 150px !important;
+    height: 137px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 150px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 83px !important;
+    right: 11px !important;
+    inset-inline-end: 11px !important;
+    width: 140px !important;
+    height: 43px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 140px !important; }
+
+  #imHeader_imTextObject_06_wrapper {
+    top: 126px !important;
+    right: 10px !important;
+    inset-inline-end: 10px !important;
+    width: 140px !important;
+    height: 17px !important;
+  }
+  #imHeader_imTextObject_06_wrapper .fs11lh1-5 { font-size: 8.5px !important; }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper { height: 68px !important; padding-left: 62px !important; }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon { left: 13px !important; width: 34px !important; height: 34px !important; }
+}
+
+@media (max-width: 360px) {
+  #imPage { grid-template-rows: 140px auto 150px !important; }
+  #imHeaderBg, #imHeaderObjects { height: 140px !important; }
+
+  #imHeader_imMenuObject_01_wrapper { top: 11px !important; left: auto !important; inset-inline-start: auto !important; right: 9px !important; inset-inline-end: 9px !important; width: 42px !important; height: 42px !important; }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 42px !important; height: 42px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 23px !important; }
+
+  #imHeader_imObjectImage_05_wrapper { top: 1px !important; left: 51px !important; inset-inline-start: 51px !important; width: 136px !important; height: 132px !important; }
+  #imHeader_imObjectImage_05_wrapper img { width: 136px !important; }
+
+  #imHeader_imObjectImage_07_wrapper { top: 84px !important; right: 8px !important; inset-inline-end: 8px !important; width: 125px !important; height: 39px !important; }
+  #imHeader_imObjectImage_07_wrapper img { width: 125px !important; }
+
+  #imHeader_imTextObject_06_wrapper { top: 123px !important; right: 7px !important; inset-inline-end: 7px !important; width: 126px !important; height: 15px !important; }
+  #imHeader_imTextObject_06_wrapper .fs11lh1-5 { font-size: 7.5px !important; }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper { height: 64px !important; padding-left: 58px !important; }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon { left: 12px !important; width: 32px !important; height: 32px !important; }
+}
+
+
+/* Final responsive header polish */
+@media (max-width: 991px) {
+  #imHeader_imMenuObject_01_wrapper { top: 10px !important; left: auto !important; inset-inline-start: auto !important; right: 12px !important; inset-inline-end: 12px !important; }
+  #imHeader_imObjectImage_05_wrapper { left: 58px !important; width: 190px !important; height: 138px !important; }
+  #imHeader_imObjectImage_05_wrapper img { width: 190px !important; filter: brightness(1.18) contrast(1.08) !important; }
+  #imHeader_imObjectImage_07_wrapper { top: 80px !important; right: 20px !important; inset-inline-end: 20px !important; width: 158px !important; height: 48px !important; }
+  #imHeader_imObjectImage_07_wrapper img { width: 158px !important; }
+}
+@media (max-width: 480px) {
+  #imHeader_imMenuObject_01_wrapper { top: 9px !important; left: auto !important; inset-inline-start: auto !important; right: 10px !important; inset-inline-end: 10px !important; }
+  #imHeader_imObjectImage_05_wrapper { left: 54px !important; width: 180px !important; }
+  #imHeader_imObjectImage_05_wrapper img { width: 180px !important; }
+  #imHeader_imObjectImage_07_wrapper { right: 10px !important; inset-inline-end: 10px !important; width: 150px !important; }
+  #imHeader_imObjectImage_07_wrapper img { width: 150px !important; }
+}
+@media (max-width: 360px) {
+  #imHeader_imObjectImage_05_wrapper { left: 50px !important; width: 155px !important; }
+  #imHeader_imObjectImage_05_wrapper img { width: 155px !important; }
+  #imHeader_imObjectImage_07_wrapper { right: 6px !important; inset-inline-end: 6px !important; width: 135px !important; }
+  #imHeader_imObjectImage_07_wrapper img { width: 135px !important; }
+}
+
+/* Latest responsive header alignment: logo left, ISO marks toward the right,
+   with the hamburger acting as the top-right anchor. Desktop is untouched. */
+@media (max-width: 991px) {
+  #imHeader_imObjectImage_05_wrapper {
+    left: 0 !important;
+    inset-inline-start: 0 !important;
+    top: -18px !important;
+    width: 250px !important;
+    height: 155px !important;
+    overflow: hidden !important;
+    text-align: left !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    left: 0 !important;
+    width: 250px !important;
+    max-width: none !important;
+    transform: none !important;
+    filter: brightness(.88) contrast(1.10) saturate(.96) !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 76px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+    right: 12px !important;
+    inset-inline-end: 12px !important;
+    width: 205px !important;
+    height: 55px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    overflow: visible !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 205px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 10px !important;
+    right: 12px !important;
+    inset-inline-end: 12px !important;
+    left: auto !important;
+    inset-inline-start: auto !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -15px !important;
+    left: -2px !important;
+    inset-inline-start: -2px !important;
+    width: 225px !important;
+    height: 150px !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    width: 225px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 78px !important;
+    right: 9px !important;
+    inset-inline-end: 9px !important;
+    width: 190px !important;
+    height: 50px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 190px !important;
+  }
+}
+
+@media (max-width: 430px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -13px !important;
+    left: -4px !important;
+    inset-inline-start: -4px !important;
+    width: 205px !important;
+    height: 148px !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    width: 205px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 80px !important;
+    right: 7px !important;
+    inset-inline-end: 7px !important;
+    width: 176px !important;
+    height: 47px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 176px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -12px !important;
+    left: -5px !important;
+    inset-inline-start: -5px !important;
+    width: 188px !important;
+    height: 144px !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    width: 188px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 82px !important;
+    right: 5px !important;
+    inset-inline-end: 5px !important;
+    width: 158px !important;
+    height: 43px !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 158px !important;
+  }
+}
+
+/* ================================================================
+   FINAL RESPONSIVE HEADER / NAV POLISH
+   Desktop (992px+) intentionally untouched.
+   ================================================================ */
+@media (max-width: 991px) {
+  /* A cleaner corporate header: cool white surface + subtle blue edge. */
+  #imHeaderBg {
+    background: linear-gradient(180deg, #ffffff 0%, #f7fbfd 72%, #eef6fa 100%) !important;
+    border-bottom: 2px solid rgba(54, 129, 160, .18) !important;
+    box-shadow: 0 4px 18px rgba(22, 53, 72, .10) !important;
+  }
+
+  #imHeaderObjects {
+    overflow: hidden !important;
+  }
+
+  /* Logo: slightly higher + farther left, larger and more legible. */
+  #imHeader_imObjectImage_05_wrapper {
+    top: -20px !important;
+    left: -7px !important;
+    width: 250px !important;
+    height: 155px !important;
+    z-index: 1005 !important;
+  }
+
+  #imHeader_imObjectImage_05_wrapper img {
+    width: 250px !important;
+    filter: brightness(.84) contrast(1.12) saturate(.98) drop-shadow(0 2px 2px rgba(12, 38, 55, .10)) !important;
+  }
+
+  /* Hamburger: premium floating control, firmly top-right. */
+  #imHeader_imMenuObject_01_wrapper {
+    top: 12px !important;
+    right: 13px !important;
+    width: 50px !important;
+    height: 50px !important;
+    z-index: 10410 !important;
+  }
+
+  #imHeader_imMenuObject_01 .hamburger-button {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 9px !important;
+    background: linear-gradient(145deg, #679bb5, #3f7e9b) !important;
+    box-shadow: 0 6px 15px rgba(30, 71, 91, .22), inset 0 1px 0 rgba(255,255,255,.25) !important;
+    transition: transform .2s ease, box-shadow .2s ease !important;
+  }
+
+  #imHeader_imMenuObject_01 .hamburger-button:active {
+    transform: scale(.95) !important;
+  }
+
+  #imHeader_imMenuObject_01 .hamburger-bar {
+    width: 29px !important;
+    height: 3px !important;
+    border-radius: 4px !important;
+    background: #fff !important;
+    box-shadow: 0 1px 1px rgba(0,0,0,.10) !important;
+  }
+
+  /* ISO marks: visually opposite the hamburger, aligned on one clean row. */
+  #imHeader_imObjectImage_07_wrapper {
+    top: 82px !important;
+    right: 14px !important;
+    width: 205px !important;
+    height: 55px !important;
+    z-index: 1007 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+  }
+
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 205px !important;
+    max-width: 100% !important;
+    height: auto !important;
+    margin: 0 !important;
+  }
+
+  /* Keep the secondary header copy discreet on small screens. */
+  #imHeader_imTextObject_06_wrapper {
+    top: 133px !important;
+    right: 14px !important;
+    width: 205px !important;
+    height: 16px !important;
+    text-align: right !important;
+  }
+
+  /* Opened navigation panel: modern corporate treatment. */
+  #imHeader_imMenuObject_01-menu-opened {
+    width: min(335px, 86vw) !important;
+    max-width: 335px !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f6fafc 100%) !important;
+    border-left: 1px solid rgba(46, 106, 133, .15) !important;
+    box-shadow: -16px 0 38px rgba(12, 38, 55, .22) !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-background {
+    background: transparent !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-close-button {
+    top: 13px !important;
+    right: 13px !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 9px !important;
+    background: #eef5f8 !important;
+    color: #173247 !important;
+    box-shadow: 0 3px 10px rgba(18, 51, 68, .10) !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened #imHeader_imMenuObject_01_container-menu-opened > ul {
+    top: 72px !important;
+    height: calc(100% - 72px) !important;
+    padding: 8px 12px 24px !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li {
+    margin: 3px 0 !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper {
+    height: 64px !important;
+    padding: 0 14px 0 61px !important;
+    border-radius: 12px !important;
+    background: rgba(255,255,255,.72) !important;
+    border: 1px solid rgba(61, 126, 154, .08) !important;
+    box-shadow: 0 2px 9px rgba(26, 66, 85, .05) !important;
+    transition: background .18s ease, transform .18s ease, box-shadow .18s ease !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper:hover,
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper:focus-within {
+    background: #edf6fa !important;
+    box-shadow: 0 4px 13px rgba(26, 66, 85, .09) !important;
+    transform: translateX(-2px) !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .label {
+    color: #162f40 !important;
+    font-size: clamp(18px, 4.8vw, 21px) !important;
+    font-weight: 500 !important;
+    letter-spacing: .1px !important;
+  }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon {
+    left: 14px !important;
+    width: 32px !important;
+    height: 32px !important;
+    max-width: 32px !important;
+    max-height: 32px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -18px !important;
+    left: -8px !important;
+    width: 225px !important;
+    height: 151px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 225px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 82px !important;
+    right: 9px !important;
+    width: 190px !important;
+    height: 50px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 190px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 11px !important;
+    right: 10px !important;
+    width: 48px !important;
+    height: 48px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 48px !important; height: 48px !important; }
+}
+
+@media (max-width: 430px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -17px !important;
+    left: -9px !important;
+    width: 210px !important;
+    height: 149px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 210px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 83px !important;
+    right: 7px !important;
+    width: 178px !important;
+    height: 47px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 178px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 10px !important;
+    right: 9px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 46px !important; height: 46px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 27px !important; }
+
+  #imHeader_imTextObject_06_wrapper {
+    top: 132px !important;
+    right: 8px !important;
+    width: 178px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -15px !important;
+    left: -10px !important;
+    width: 195px !important;
+    height: 145px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 195px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 82px !important;
+    right: 5px !important;
+    width: 160px !important;
+    height: 43px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 160px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 9px !important;
+    right: 8px !important;
+    width: 43px !important;
+    height: 43px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 43px !important; height: 43px !important; border-radius: 8px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 25px !important; height: 3px !important; }
+
+  #imHeader_imTextObject_06_wrapper {
+    top: 128px !important;
+    right: 5px !important;
+    width: 160px !important;
+  }
+}
+
+/* ===== Final responsive header polish =====
+   Responsive only: desktop (992px and above) is intentionally untouched. */
+@media (max-width: 991px) {
+  #imHeaderBg {
+    background: linear-gradient(135deg, #f8fbfd 0%, #eef5f8 55%, #e5eff4 100%) !important;
+    border-bottom: 2px solid rgba(36, 91, 120, .16) !important;
+    box-shadow: 0 5px 18px rgba(21, 55, 73, .12) !important;
+  }
+
+  #imHeaderObjects {
+    background: linear-gradient(180deg, rgba(255,255,255,.96), rgba(245,250,252,.96)) !important;
+    border-radius: 0 0 14px 14px !important;
+  }
+
+  /* Logo: lift it slightly and keep it firmly toward the left. */
+  #imHeader_imObjectImage_05_wrapper {
+    top: -10px !important;
+    left: 16px !important;
+    inset-inline-start: 16px !important;
+    width: 202px !important;
+    height: 142px !important;
+    filter: drop-shadow(0 5px 8px rgba(16, 48, 67, .10));
+  }
+  #imHeader_imObjectImage_05_wrapper img {
+    width: 202px !important;
+    filter: brightness(.88) contrast(1.10) saturate(.92) !important;
+  }
+
+  /* ISO marks: balanced on the right, leaving the hamburger clear. */
+  #imHeader_imObjectImage_07_wrapper {
+    top: 73px !important;
+    right: 14px !important;
+    inset-inline-end: 14px !important;
+    width: 176px !important;
+    height: 50px !important;
+    padding: 2px 0 !important;
+    box-sizing: border-box !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img {
+    width: 176px !important;
+    max-width: 100% !important;
+    filter: drop-shadow(0 2px 3px rgba(18, 48, 64, .10));
+  }
+
+  /* Hamburger: premium compact button in the upper-right. */
+  #imHeader_imMenuObject_01_wrapper {
+    top: 10px !important;
+    right: 12px !important;
+    inset-inline-end: 12px !important;
+    width: 48px !important;
+    height: 48px !important;
+    z-index: 10420 !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 11px !important;
+    background: linear-gradient(145deg, #5e96b3, #3f7898) !important;
+    border: 1px solid rgba(255,255,255,.42) !important;
+    box-shadow: 0 7px 16px rgba(28, 70, 91, .22), inset 0 1px 0 rgba(255,255,255,.22) !important;
+    transition: transform .22s ease, box-shadow .22s ease !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button:hover,
+  #imHeader_imMenuObject_01 .hamburger-button:focus-visible {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 9px 20px rgba(28, 70, 91, .28), inset 0 1px 0 rgba(255,255,255,.25) !important;
+    outline: none !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-bar {
+    width: 27px !important;
+    height: 3px !important;
+    border-radius: 4px !important;
+    background: #fff !important;
+    box-shadow: 0 1px 1px rgba(0,0,0,.08) !important;
+    transition: transform .25s ease, opacity .2s ease !important;
+  }
+
+  /* Make the opened X5 menu a large, polished mobile drawer. */
+  #imHeader_imMenuObject_01-menu-opened {
+    width: min(390px, 88vw) !important;
+    max-width: 390px !important;
+    background: linear-gradient(160deg, #f8fbfd 0%, #edf5f8 48%, #e4eef3 100%) !important;
+    border-left: 1px solid rgba(44, 91, 114, .12) !important;
+    box-shadow: -18px 0 45px rgba(12, 39, 53, .24) !important;
+    animation: pcCareMenuIn .34s cubic-bezier(.22,.8,.25,1) both !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-background {
+    background: transparent !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-close-button {
+    top: 14px !important;
+    right: 14px !important;
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 12px !important;
+    color: #17354a !important;
+    background: rgba(255,255,255,.78) !important;
+    box-shadow: 0 4px 12px rgba(20, 57, 74, .10) !important;
+    transition: transform .2s ease, background .2s ease !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-close-button:hover,
+  #imHeader_imMenuObject_01-menu-opened .hamburger-menu-close-button:focus-visible {
+    transform: rotate(90deg) !important;
+    background: #fff !important;
+    outline: none !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened #imHeader_imMenuObject_01_container-menu-opened > ul {
+    top: 76px !important;
+    height: calc(100% - 76px) !important;
+    padding: 8px 16px 28px !important;
+    box-sizing: border-box !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li {
+    margin: 0 0 10px !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper {
+    height: 72px !important;
+    padding: 0 18px 0 70px !important;
+    border-radius: 16px !important;
+    background: rgba(255,255,255,.84) !important;
+    border: 1px solid rgba(62, 106, 127, .10) !important;
+    box-shadow: 0 5px 14px rgba(31, 71, 88, .08) !important;
+    transition: transform .2s ease, background .2s ease, box-shadow .2s ease !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper:hover,
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper:focus-within {
+    transform: translateX(-3px) !important;
+    background: rgba(255,255,255,.98) !important;
+    box-shadow: 0 8px 18px rgba(31, 71, 88, .13) !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .label {
+    color: #17354a !important;
+    font-size: clamp(19px, 5.2vw, 23px) !important;
+    font-weight: 600 !important;
+    letter-spacing: .15px !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon {
+    left: 18px !important;
+    inset-inline-start: 18px !important;
+    width: 38px !important;
+    height: 38px !important;
+    max-width: 38px !important;
+    max-height: 38px !important;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,.12));
+  }
+
+  #imPageExtContainer:after {
+    background: rgba(10, 31, 43, .46) !important;
+    backdrop-filter: blur(2px) !important;
+    -webkit-backdrop-filter: blur(2px) !important;
+  }
+}
+
+@keyframes pcCareMenuIn {
+  from { transform: translate3d(100%, 0, 0); opacity: .65; }
+  to { transform: translate3d(0, 0, 0); opacity: 1; }
+}
+
+@media (max-width: 600px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -13px !important;
+    left: 8px !important;
+    width: 194px !important;
+    height: 140px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 194px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 76px !important;
+    right: 10px !important;
+    width: 168px !important;
+    height: 47px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 168px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 9px !important;
+    right: 9px !important;
+    width: 46px !important;
+    height: 46px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 46px !important; height: 46px !important; }
+}
+
+@media (max-width: 430px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -17px !important;
+    left: 2px !important;
+    width: 188px !important;
+    height: 139px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 188px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 77px !important;
+    right: 7px !important;
+    width: 164px !important;
+    height: 45px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 164px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 8px !important;
+    right: 8px !important;
+    width: 45px !important;
+    height: 45px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 45px !important; height: 45px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 25px !important; }
+
+  #imHeader_imMenuObject_01-menu-opened {
+    width: min(370px, 91vw) !important;
+    max-width: 370px !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened #imHeader_imMenuObject_01_container-menu-opened > ul {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+  }
+}
+
+@media (max-width: 360px) {
+  #imHeader_imObjectImage_05_wrapper {
+    top: -15px !important;
+    left: 0 !important;
+    width: 176px !important;
+    height: 135px !important;
+  }
+  #imHeader_imObjectImage_05_wrapper img { width: 176px !important; }
+
+  #imHeader_imObjectImage_07_wrapper {
+    top: 78px !important;
+    right: 5px !important;
+    width: 151px !important;
+    height: 42px !important;
+  }
+  #imHeader_imObjectImage_07_wrapper img { width: 151px !important; }
+
+  #imHeader_imMenuObject_01_wrapper {
+    top: 7px !important;
+    right: 7px !important;
+    width: 43px !important;
+    height: 43px !important;
+  }
+  #imHeader_imMenuObject_01 .hamburger-button { width: 43px !important; height: 43px !important; }
+  #imHeader_imMenuObject_01 .hamburger-bar { width: 24px !important; height: 3px !important; }
+
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper {
+    height: 64px !important;
+    padding-left: 64px !important;
+  }
+  #imHeader_imMenuObject_01-menu-opened li > .label-wrapper .menu-item-icon {
+    left: 15px !important;
+    width: 34px !important;
+    height: 34px !important;
+  }
+}
+
+
+/* Call Us is hidden only below 1200px. Desktop widths (1200px+) retain it. */
+@media (max-width: 1199px) {
+  #imHeader_imTextObject_04_wrapper .pc-care-call-us {
+    display: none !important;
+  }
+}

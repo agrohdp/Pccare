@@ -1,0 +1,161 @@
+/* PC Care image/service grid — responsive only.
+   Desktop (1200px+) intentionally untouched. */
+@media (max-width: 1199.9px) {
+  /* Keep the section background behind the image cards. */
+  #imPageRow_2 {
+    z-index: 0;
+    background: #f7fafc;
+  }
+
+  #imCell_49,
+  #imCell_50,
+  #imCell_51,
+  #imCell_52,
+  #imCell_53,
+  #imCell_54,
+  #imCell_56,
+  #imCell_57,
+  #imCell_58,
+  #imCell_59,
+  #imCell_55,
+  #imCell_60 {
+    min-width: 0;
+    box-sizing: border-box;
+    align-self: stretch;
+    justify-self: stretch;
+    padding: 14px;
+  }
+
+  #imCell_49 > div[id^="imObjectImage_"],
+  #imCell_50 > div[id^="imObjectImage_"],
+  #imCell_51 > div[id^="imObjectImage_"],
+  #imCell_52 > div[id^="imObjectImage_"],
+  #imCell_53 > div[id^="imObjectImage_"],
+  #imCell_54 > div[id^="imObjectImage_"],
+  #imCell_56 > div[id^="imObjectImage_"],
+  #imCell_57 > div[id^="imObjectImage_"],
+  #imCell_58 > div[id^="imObjectImage_"],
+  #imCell_59 > div[id^="imObjectImage_"],
+  #imCell_55 > div[id^="imObjectImage_"],
+  #imCell_60 > div[id^="imObjectImage_"] {
+    width: 100%;
+    max-width: 190px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background: #ffffff;
+    border: 1px solid rgba(0, 55, 85, 0.12);
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(0, 36, 58, 0.10);
+    transition: transform .25s ease, box-shadow .25s ease;
+  }
+
+  #imCell_49 > div[id^="imObjectImage_"]:hover,
+  #imCell_50 > div[id^="imObjectImage_"]:hover,
+  #imCell_51 > div[id^="imObjectImage_"]:hover,
+  #imCell_52 > div[id^="imObjectImage_"]:hover,
+  #imCell_53 > div[id^="imObjectImage_"]:hover,
+  #imCell_54 > div[id^="imObjectImage_"]:hover,
+  #imCell_56 > div[id^="imObjectImage_"]:hover,
+  #imCell_57 > div[id^="imObjectImage_"]:hover,
+  #imCell_58 > div[id^="imObjectImage_"]:hover,
+  #imCell_59 > div[id^="imObjectImage_"]:hover,
+  #imCell_55 > div[id^="imObjectImage_"]:hover,
+  #imCell_60 > div[id^="imObjectImage_"]:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0, 36, 58, 0.15);
+  }
+
+  #imCell_49 img,
+  #imCell_50 img,
+  #imCell_51 img,
+  #imCell_52 img,
+  #imCell_53 img,
+  #imCell_54 img,
+  #imCell_56 img,
+  #imCell_57 img,
+  #imCell_58 img,
+  #imCell_59 img,
+  #imCell_55 img,
+  #imCell_60 img {
+    display: block;
+    width: 100% !important;
+    max-width: 159px;
+    height: auto !important;
+    margin: 0 auto;
+  }
+}
+
+/* Tablet / smaller desktop: 3 columns x 4 rows. */
+@media (max-width: 1199.9px) and (min-width: 720px) {
+  #imContent { grid-template-rows: auto auto auto auto auto auto auto auto; }
+
+  #imCell_49 { grid-column: 2 / 26; grid-row: 2 / 3; }
+  #imCell_50 { grid-column: 26 / 50; grid-row: 2 / 3; }
+  #imCell_51 { grid-column: 50 / 74; grid-row: 2 / 3; }
+  #imCell_52 { grid-column: 2 / 26; grid-row: 3 / 4; }
+  #imCell_53 { grid-column: 26 / 50; grid-row: 3 / 4; }
+  #imCell_54 { grid-column: 50 / 74; grid-row: 3 / 4; }
+  #imCell_56 { grid-column: 2 / 26; grid-row: 4 / 5; }
+  #imCell_57 { grid-column: 26 / 50; grid-row: 4 / 5; }
+  #imCell_58 { grid-column: 50 / 74; grid-row: 4 / 5; }
+  #imCell_59 { grid-column: 2 / 26; grid-row: 5 / 6; }
+  #imCell_55 { grid-column: 26 / 50; grid-row: 5 / 6; }
+  #imCell_60 { grid-column: 50 / 74; grid-row: 5 / 6; }
+
+  #imPageRow_2 { grid-column: 2 / 74; grid-row: 2 / 6; }
+}
+
+/* Phone/tablet portrait: 2 columns x 6 rows. */
+@media (max-width: 719.9px) {
+  #imContent { grid-template-rows: auto auto auto auto auto auto auto auto auto; }
+
+  #imCell_49 { grid-column: 2 / 38; grid-row: 2 / 3; }
+  #imCell_50 { grid-column: 38 / 74; grid-row: 2 / 3; }
+  #imCell_51 { grid-column: 2 / 38; grid-row: 3 / 4; }
+  #imCell_52 { grid-column: 38 / 74; grid-row: 3 / 4; }
+  #imCell_53 { grid-column: 2 / 38; grid-row: 4 / 5; }
+  #imCell_54 { grid-column: 38 / 74; grid-row: 4 / 5; }
+  #imCell_56 { grid-column: 2 / 38; grid-row: 5 / 6; }
+  #imCell_57 { grid-column: 38 / 74; grid-row: 5 / 6; }
+  #imCell_58 { grid-column: 2 / 38; grid-row: 6 / 7; }
+  #imCell_59 { grid-column: 38 / 74; grid-row: 6 / 7; }
+  #imCell_55 { grid-column: 2 / 38; grid-row: 7 / 8; }
+  #imCell_60 { grid-column: 38 / 74; grid-row: 7 / 8; }
+
+  #imPageRow_2 { grid-column: 2 / 74; grid-row: 2 / 8; }
+}
+
+@media (max-width: 479.9px) {
+  #imCell_49,
+  #imCell_50,
+  #imCell_51,
+  #imCell_52,
+  #imCell_53,
+  #imCell_54,
+  #imCell_56,
+  #imCell_57,
+  #imCell_58,
+  #imCell_59,
+  #imCell_55,
+  #imCell_60 {
+    padding: 10px 7px;
+  }
+
+  #imCell_49 > div[id^="imObjectImage_"],
+  #imCell_50 > div[id^="imObjectImage_"],
+  #imCell_51 > div[id^="imObjectImage_"],
+  #imCell_52 > div[id^="imObjectImage_"],
+  #imCell_53 > div[id^="imObjectImage_"],
+  #imCell_54 > div[id^="imObjectImage_"],
+  #imCell_56 > div[id^="imObjectImage_"],
+  #imCell_57 > div[id^="imObjectImage_"],
+  #imCell_58 > div[id^="imObjectImage_"],
+  #imCell_59 > div[id^="imObjectImage_"],
+  #imCell_55 > div[id^="imObjectImage_"],
+  #imCell_60 > div[id^="imObjectImage_"] {
+    max-width: 174px;
+    padding: 8px;
+    border-radius: 12px;
+  }
+}

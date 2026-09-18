@@ -1,0 +1,297 @@
+/*
+ * PC Care responsive layout corrections.
+ * This file changes presentation only. Page copy, links, and form fields
+ * remain in the generated HTML.
+ */
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1199.9px) {
+  #imPage {
+    min-width: 0 !important;
+  }
+
+  #imContent,
+  #imContentGraphics {
+    min-width: 0 !important;
+  }
+}
+
+#imPage {
+  grid-template-rows: auto auto auto !important;
+}
+
+/*
+ * The exported footer uses fixed, breakpoint-specific coordinates. Reflow the
+ * existing footer objects into a normal grid so the same content remains
+ * visible at every width.
+ */
+#imFooterBg {
+  display: none !important;
+}
+
+#imFooter {
+  display: block !important;
+  position: relative !important;
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  background: #00334e !important;
+}
+
+#imFooterObjects {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-template-areas:
+    "brand contact address"
+    "credit credit copyright" !important;
+  gap: 18px 44px !important;
+  align-items: start !important;
+  width: min(1200px, calc(100% - 48px)) !important;
+  height: auto !important;
+  min-height: 0 !important;
+  padding: 30px 0 22px !important;
+  margin: 0 auto !important;
+  position: relative !important;
+  box-sizing: border-box !important;
+}
+
+#imFooter_imObjectForm_10_wrapper {
+  display: none !important;
+}
+
+#imFooter_imObjectImage_13_wrapper,
+#imFooter_imTextObject_12_wrapper,
+#imFooter_imTextObject_01_wrapper,
+#imFooter_imTextObject_08_wrapper,
+#imFooter_imTextObject_14_wrapper {
+  display: block !important;
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  height: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  transform: none !important;
+  text-align: start !important;
+  box-sizing: border-box !important;
+}
+
+#imFooter_imObjectImage_13_wrapper {
+  grid-area: brand;
+  align-self: start;
+}
+
+#imFooter_imTextObject_12_wrapper {
+  grid-area: contact;
+}
+
+#imFooter_imTextObject_01_wrapper {
+  grid-area: address;
+}
+
+#imFooter_imTextObject_08_wrapper {
+  grid-area: credit;
+  align-self: end;
+}
+
+#imFooter_imTextObject_14_wrapper {
+  grid-area: copyright;
+  align-self: end;
+  text-align: end !important;
+}
+
+#imFooter_imObjectImage_13_wrapper img {
+  display: block !important;
+  width: 149px !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  clip-path: none !important;
+}
+
+#imFooterObjects .text-inner,
+#imFooterObjects .text-tab-content {
+  width: 100% !important;
+  height: auto !important;
+  min-height: 0 !important;
+  overflow: visible !important;
+  box-sizing: border-box !important;
+}
+
+#imFooterObjects .text-inner {
+  color: #f3f9fe !important;
+  overflow-wrap: anywhere;
+}
+
+#imFooterObjects .text-inner > div {
+  max-width: 100%;
+}
+
+#imFooterObjects .fs12lh1-15,
+#imFooterObjects .fs16lh1-15,
+#imFooterObjects .fs8lh1,
+#imFooterObjects .fs8lh1-5 {
+  white-space: normal !important;
+}
+
+@media (max-width: 899.9px) and (min-width: 600px) {
+  #imFooterObjects {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-areas:
+      "brand contact"
+      "address address"
+      "credit copyright" !important;
+    gap: 20px 32px !important;
+    width: min(calc(100% - 40px), 720px) !important;
+    padding-top: 28px !important;
+  }
+
+  #imFooter_imTextObject_01_wrapper {
+    max-width: 420px !important;
+  }
+}
+
+@media (max-width: 599.9px) {
+  #imPage {
+    grid-template-rows: auto minmax(0, auto) auto !important;
+  }
+
+  #imFooterObjects {
+    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-areas:
+      "brand"
+      "contact"
+      "address"
+      "credit"
+      "copyright" !important;
+    gap: 18px !important;
+    width: calc(100% - 32px) !important;
+    padding: 26px 0 20px !important;
+    text-align: center !important;
+  }
+
+  #imFooter_imObjectImage_13_wrapper,
+  #imFooter_imTextObject_12_wrapper,
+  #imFooter_imTextObject_01_wrapper,
+  #imFooter_imTextObject_08_wrapper,
+  #imFooter_imTextObject_14_wrapper {
+    text-align: center !important;
+  }
+
+  #imFooter_imObjectImage_13_wrapper img {
+    margin: 0 auto !important;
+  }
+}
+/* Desktop footer: full-width, four-column layout with the existing contact form visible. */
+@media (min-width: 1200px) {
+  #imFooter {
+    width: 100% !important;
+    min-width: 0 !important;
+    background: #00334e !important;
+  }
+
+  #imFooterObjects {
+    display: grid !important;
+    grid-template-columns: minmax(150px, 1.05fr) minmax(230px, 1.35fr) minmax(220px, 1.25fr) minmax(260px, 1.45fr) !important;
+    grid-template-areas:
+      "brand address contact form"
+      "credit credit copyright copyright" !important;
+    column-gap: 42px !important;
+    row-gap: 12px !important;
+    width: 100% !important;
+    max-width: none !important;
+    padding: 28px clamp(32px, 7vw, 120px) 20px !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+    align-items: start !important;
+  }
+
+  #imFooter_imObjectForm_10_wrapper {
+    display: block !important;
+    grid-area: form !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    max-width: none !important;
+    overflow: visible !important;
+    text-align: start !important;
+  }
+
+  #imFooter_imObjectImage_13_wrapper {
+    grid-area: brand !important;
+    align-self: start !important;
+  }
+
+  #imFooter_imTextObject_01_wrapper {
+    grid-area: address !important;
+  }
+
+  #imFooter_imTextObject_12_wrapper {
+    grid-area: contact !important;
+  }
+
+  #imFooter_imTextObject_08_wrapper {
+    grid-area: credit !important;
+    align-self: end !important;
+  }
+
+  #imFooter_imTextObject_14_wrapper {
+    grid-area: copyright !important;
+    align-self: end !important;
+    text-align: start !important;
+  }
+
+  #imFooter_imObjectForm_10_form {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  #imFooter_imObjectForm_10_1_container,
+  #imFooter_imObjectForm_10_2_container {
+    padding-inline-end: 0 !important;
+  }
+
+  #imFooter_imObjectForm_10_1,
+  #imFooter_imObjectForm_10_2 {
+    width: 100% !important;
+    box-sizing: border-box !important;
+  }
+
+  #imFooter_imObjectForm_10_2 {
+    min-height: 53px !important;
+  }
+
+  #imFooter_imObjectForm_10_buttonswrap {
+    padding-inline-end: 0 !important;
+    text-align: end !important;
+  }
+}
+
+/* Desktop full-bleed footer: extend the footer box to both viewport edges. */
+@media (min-width: 1200px) {
+  #imFooter {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-inline-start: calc(50% - 50vw) !important;
+    margin-inline-end: 0 !important;
+  }
+
+  #imFooterObjects {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}

@@ -1,0 +1,73 @@
+/* Mobile-only correction for slides 2–6.
+   The supplied artwork already contains all of its own labels. Each image is
+   shown at its natural aspect ratio, so it never gets stretched/cropped or
+   pushed to the bottom of the first slide's taller layout. Desktop is untouched. */
+@media (max-width: 767px) {
+  #pc-care-slider {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  #pc-care-slider .pc-care-slides {
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    line-height: 0 !important;
+  }
+
+  /* First slide keeps its existing responsive text treatment. */
+  #pc-care-slider[data-active-slide="0"] .pc-care-slides {
+    aspect-ratio: auto !important;
+  }
+
+  /* Slides 2–6: the parent takes exactly the artwork's aspect ratio. */
+  #pc-care-slider[data-active-slide="1"] .pc-care-slides { aspect-ratio: 1536 / 633 !important; }
+  #pc-care-slider[data-active-slide="2"] .pc-care-slides { aspect-ratio: 1536 / 590 !important; }
+  #pc-care-slider[data-active-slide="3"] .pc-care-slides { aspect-ratio: 1536 / 633 !important; }
+  #pc-care-slider[data-active-slide="4"] .pc-care-slides { aspect-ratio: 1536 / 633 !important; }
+  #pc-care-slider[data-active-slide="5"] .pc-care-slides { aspect-ratio: 1536 / 637 !important; }
+
+  #pc-care-slider .pc-care-slide:not(.is-active) {
+    position: absolute !important;
+    inset: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  #pc-care-slider .pc-care-slide.is-active:not([data-slide="0"]) {
+    position: relative !important;
+    inset: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    display: block !important;
+    background: transparent !important;
+    overflow: hidden !important;
+  }
+
+  #pc-care-slider .pc-care-slide.is-active:not([data-slide="0"]) > img {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    max-width: 100% !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    object-fit: contain !important;
+    object-position: center center !important;
+    vertical-align: top !important;
+  }
+
+  #pc-care-slider .pc-care-slide.is-active:not([data-slide="0"])::after {
+    inset: 0 !important;
+    height: auto !important;
+    background: rgba(0,0,0,.38) !important;
+  }
+}

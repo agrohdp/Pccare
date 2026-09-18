@@ -1,0 +1,29 @@
+/* Restore the existing X5 sticky navigation on desktop and tablet.
+   Mobile keeps the current responsive header/menu. */
+@media (min-width: 720px) {
+  #imStickyBarContainer {
+    opacity: 0;
+    visibility: hidden;
+    transform: translate3d(0, -100%, 0);
+    transition: opacity .25s ease, transform .3s ease, visibility 0s linear .3s;
+    pointer-events: none;
+  }
+
+  #imStickyBarContainer.pc-care-sticky-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translate3d(0, 0, 0);
+    transition: opacity .25s ease, transform .3s ease, visibility 0s linear 0s;
+    pointer-events: auto;
+  }
+
+  #imStickyBarGraphics {
+    box-shadow: 0 3px 14px rgba(0, 0, 0, .18);
+  }
+}
+
+@media (max-width: 719px) {
+  #imStickyBarContainer {
+    display: none !important;
+  }
+}

@@ -1,0 +1,119 @@
+
+/* Slider UI correction:
+   The slide artwork already contains its own captions/labels.
+   Keep the artwork inside the slide and reserve the lower area so
+   the embedded labels are not covered by the HTML description. */
+#imObjectContentSlider_32,
+#imObjectContentSlider_32 > .content-slider-container,
+#imObjectContentSlider_32 > .content-slider-container > .slide-container {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+#imObjectContentSlider_32 > .content-slider-container > .slide-container {
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background-position: center bottom !important;
+}
+
+#imObjectContentSlider_32 > .content-slider-container > .slide-container > .slide-grid-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Keep the supplied HTML slide text in its own readable upper container. */
+#imObjectContentSlider_32 > .content-slider-container > .slide-container > .slide-grid-container.only-txt-grid {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+#imObjectContentSlider_32 .slide-txt-container {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+#imObjectContentSlider_32 .slide-txt-content {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding-inline: clamp(16px, 5vw, 80px);
+}
+
+/* Slides 2–5 have labels built into their supplied artwork at the bottom.
+   Put the HTML description above that artwork text. */
+#imObjectContentSlider_32-slide-2 .slide-txt-content,
+#imObjectContentSlider_32-slide-3 .slide-txt-content,
+#imObjectContentSlider_32-slide-4 .slide-txt-content,
+#imObjectContentSlider_32-slide-5 .slide-txt-content {
+    align-content: start;
+    padding-top: clamp(35px, 10vh, 110px);
+    padding-bottom: clamp(180px, 23vh, 250px);
+}
+
+/* Keep the first welcome slide visually centered. */
+#imObjectContentSlider_32-slide-0 .slide-txt-content {
+    align-content: center;
+}
+
+@media (max-width: 767px) {
+    #imObjectContentSlider_32,
+    #imObjectContentSlider_32 > .content-slider-container,
+    #imObjectContentSlider_32 > .content-slider-container > .slide-container {
+        min-height: 500px;
+        height: 500px;
+    }
+
+    #imObjectContentSlider_32 > .content-slider-container > .slide-container {
+        background-position: center bottom !important;
+        background-size: cover !important;
+    }
+
+    #imObjectContentSlider_32 .slide-txt-content {
+        padding-inline: 18px;
+    }
+
+    #imObjectContentSlider_32-slide-2 .slide-txt-content,
+    #imObjectContentSlider_32-slide-3 .slide-txt-content,
+    #imObjectContentSlider_32-slide-4 .slide-txt-content,
+    #imObjectContentSlider_32-slide-5 .slide-txt-content {
+        padding-top: 35px;
+        padding-bottom: 190px;
+        align-content: start;
+    }
+
+    #imObjectContentSlider_32 .slide-description {
+        font-size: clamp(15px, 4.2vw, 20px) !important;
+        line-height: 1.35;
+    }
+
+    #imObjectContentSlider_32 .slide-title {
+        font-size: clamp(25px, 7vw, 36px) !important;
+        line-height: 1.15;
+    }
+}
+
+@media (max-width: 480px) {
+    #imObjectContentSlider_32,
+    #imObjectContentSlider_32 > .content-slider-container,
+    #imObjectContentSlider_32 > .content-slider-container > .slide-container {
+        height: 500px;
+        min-height: 500px;
+    }
+
+    #imObjectContentSlider_32-slide-2 .slide-txt-content,
+    #imObjectContentSlider_32-slide-3 .slide-txt-content,
+    #imObjectContentSlider_32-slide-4 .slide-txt-content,
+    #imObjectContentSlider_32-slide-5 .slide-txt-content {
+        padding-top: 25px;
+        padding-bottom: 205px;
+    }
+}
