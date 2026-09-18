@@ -31,11 +31,9 @@
 		<script>x5engine.boot.push(function () {x5engine.analytics.setPageView({ "postUrl": "analytics/wsx5analytics.php" });});</script>
 
 	    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/mobile-menu.css">
     <link rel="stylesheet" href="assets/css/slideshow-responsive.css">
     <link rel="stylesheet" href="assets/css/slideshow-ui-fix.css">
-  <link rel="stylesheet" href="assets/css/pc-care-mobile-menu-fix.css">
-    <link rel="stylesheet" href="assets/css/pc-care-sticky-restore.css">
-    <link rel="stylesheet" href="assets/css/pc-care-footer-responsive.css">
 </head>
 	<body>
 		<div id="imPageExtContainer">
@@ -50,7 +48,7 @@
 </div></div></div><div id="imHeader_imTextObject_04_wrapper" class="template-object-wrapper"><div id="imHeader_imTextObject_04">
 	<div data-index="0"  class="text-tab-content grid-prop current-tab "  id="imHeader_imTextObject_04_tab0" style="opacity: 1; " role="tabpanel" tabindex="0">
 		<div class="text-inner">
-			<div><span class="fs10lh1-5 cf1"><b>Email Us : support@pccareindia.in | sales@pcareindia.in</b></span></div><div><div><b><span class="fs10lh1-5 cf1 pc-care-call-us">Call Us : +91 98195 65993 | 022 49645993</span></b></div></div>
+			<div><span class="fs10lh1-5 cf1"><b>Email Us : support@pccareindia.in | sales@pcareindia.in</b></span></div><div><div><b><span class="fs10lh1-5 cf1">Call Us : +91 98195 65993 | 022 49645993</span></b></div></div>
 		</div>
 	</div>
 
@@ -67,7 +65,7 @@
 
 	  <div class="cd-intro"><h1 class="cd-headline push"><span class="cd-words-wrapper"><b class="is-visible">Certified Professionals   </b><b>  ISO Standards Focused </b><b> End-to-End Implementation  </b><b> On-Time Project </b><b>Corporate Offices </b><b>  Manufacturing </b><b>Education </b><b> Healthcare </b><b>  Government </b></span></h1></div>
    </div></div><div id="imHeader_imMenuObject_01_wrapper" class="template-object-wrapper"><!-- UNSEARCHABLE --><span data-nosnippet><a id="imHeader_imMenuObject_01_skip_menu" href="#imHeader_imMenuObject_01_after_menu" class="screen-reader-only-even-focused">Skip menu</a></span><div id="imHeader_imMenuObject_01">
-
+<button class="mobile-menu-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mobile-navigation"><span></span><span></span><span></span></button>
 <nav id="imHeader_imMenuObject_01_container"><button type="button" class="clear-button-style hamburger-button hamburger-component" aria-label="Show menu"><span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span></button><div class="hamburger-menu-background-container hamburger-component">
 	<div class="hamburger-menu-background menu-mobile menu-mobile-animated hidden">
 		<button type="button" class="clear-button-style hamburger-menu-close-button" aria-label="Close"><span aria-hidden="true">&times;</span></button>
@@ -294,71 +292,36 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
    HERO
 ========================================================= */
 .pccare-about .hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
     background:
-        linear-gradient(135deg, rgba(0,35,58,.94), rgba(0,91,126,.78)),
+        linear-gradient(
+            rgba(0,58,92,.84),
+            rgba(0,58,92,.84)
+        ),
         url('https://raw.githubusercontent.com/agrohdp/web-host/main/banner.jpg');
     background-size: cover;
     background-position: center;
-    padding: clamp(60px, 9vw, 145px) clamp(20px, 6vw, 8%);
+    padding: clamp(60px, 9vw, 130px) clamp(20px, 6vw, 10%);
     text-align: center;
     color: #fff;
 }
 
-.pccare-about .hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    z-index: -2;
-    background:
-        radial-gradient(circle at 15% 20%, rgba(93,218,255,.22), transparent 34%),
-        radial-gradient(circle at 85% 80%, rgba(255,255,255,.12), transparent 30%);
-    pointer-events: none;
-}
-
-.pccare-about .hero::after {
-    content: '';
-    position: absolute;
-    inset: 8% 5%;
-    z-index: -1;
-    border: 1px solid rgba(255,255,255,.22);
-    border-radius: 28px;
-    background: linear-gradient(135deg, rgba(255,255,255,.16), rgba(255,255,255,.045));
-    box-shadow: 0 24px 70px rgba(0,0,0,.22), inset 0 1px 0 rgba(255,255,255,.16);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
-    pointer-events: none;
-}
-
-.pccare-about .hero h1,
-.pccare-about .hero p {
-    position: relative;
-    z-index: 1;
-}
-
 .pccare-about .hero h1 {
-    font-size: clamp(28px, 5.5vw, 78px);
+    font-size: clamp(28px, 5.5vw, 70px);
     font-weight: 800;
-    letter-spacing: -1px;
+    margin-bottom: clamp(14px, 2vw, 25px);
     line-height: 1.1;
-    margin: 0 auto 20px;
-    text-shadow: 0 4px 24px rgba(0,0,0,.24);
+    letter-spacing: -1px;
 }
 
 .pccare-about .hero p {
-    max-width: 920px;
+    font-size: clamp(14px, 1.6vw, 24px);
+    max-width: 900px;
     margin: 0 auto;
-    font-size: clamp(14px, 1.5vw, 24px);
-    line-height: 1.65;
-    font-weight: 400;
-    color: rgba(255,255,255,.94);
-    text-shadow: 0 2px 12px rgba(0,0,0,.18);
+    line-height: 1.7;
 }
 
 /* =========================================================
-   ABOUT GRID
+   ABOUT SECTION
 ========================================================= */
 .pccare-about .about-grid {
     display: grid;
@@ -368,7 +331,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 }
 
 /* =========================================================
-   3D PROJECT GALLERY
+   3D PROJECT GALLERY  (structure preserved)
 ========================================================= */
 .pccare-about .project-gallery-wrapper {
     width: 100%;
@@ -404,7 +367,10 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     background: #fff;
     cursor: pointer;
     transform-style: preserve-3d;
-    transition: transform .55s ease, box-shadow .55s ease, opacity .55s ease;
+    transition:
+        transform .55s ease,
+        box-shadow .55s ease,
+        opacity .55s ease;
     backface-visibility: hidden;
 }
 
@@ -414,20 +380,23 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     object-fit: cover;
     border-radius: inherit;
     filter: brightness(.82);
-    transition: transform .55s ease, filter .55s ease;
+    transition:
+        transform .55s ease,
+        filter .55s ease;
 }
 
 .pccare-about .project-slide::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0,25,45,.95) 0%,
-        rgba(0,25,45,.45) 45%,
-        rgba(0,25,45,.05) 75%,
-        transparent 100%
-    );
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,25,45,.95) 0%,
+            rgba(0,25,45,.45) 45%,
+            rgba(0,25,45,.05) 75%,
+            transparent 100%
+        );
     pointer-events: none;
 }
 
@@ -470,7 +439,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     line-height: 1.4;
 }
 
-/* 3D positions */
+/* 3D positions — untouched values */
 .pccare-about #project1:checked ~ #slide1,
 .pccare-about #project2:checked ~ #slide2,
 .pccare-about #project3:checked ~ #slide3,
@@ -479,7 +448,9 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     transform: translate3d(0,0,0) scale(1);
     opacity: 1;
     z-index: 5;
-    box-shadow: 0 20px 45px rgba(0,0,0,.25), 0 0 20px rgba(11,110,168,.18);
+    box-shadow:
+        0 20px 45px rgba(0,0,0,.25),
+        0 0 20px rgba(11,110,168,.18);
 }
 
 .pccare-about #project1:checked ~ #slide2,
@@ -487,7 +458,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 .pccare-about #project3:checked ~ #slide4,
 .pccare-about #project4:checked ~ #slide5,
 .pccare-about #project5:checked ~ #slide1 {
-    transform: translate3d(20%,0,-120px) scale(.88);
+    transform: translate3d(22%,0,-120px) scale(.88);
     opacity: .72;
     z-index: 4;
     box-shadow: 0 10px 25px rgba(0,0,0,.18);
@@ -498,7 +469,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 .pccare-about #project3:checked ~ #slide5,
 .pccare-about #project4:checked ~ #slide1,
 .pccare-about #project5:checked ~ #slide2 {
-    transform: translate3d(36%,0,-260px) scale(.72);
+    transform: translate3d(39%,0,-260px) scale(.72);
     opacity: .38;
     z-index: 3;
 }
@@ -508,7 +479,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 .pccare-about #project3:checked ~ #slide1,
 .pccare-about #project4:checked ~ #slide2,
 .pccare-about #project5:checked ~ #slide3 {
-    transform: translate3d(-36%,0,-260px) scale(.72);
+    transform: translate3d(-39%,0,-260px) scale(.72);
     opacity: .38;
     z-index: 2;
 }
@@ -518,7 +489,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 .pccare-about #project3:checked ~ #slide2,
 .pccare-about #project4:checked ~ #slide3,
 .pccare-about #project5:checked ~ #slide4 {
-    transform: translate3d(-20%,0,-120px) scale(.88);
+    transform: translate3d(-22%,0,-120px) scale(.88);
     opacity: .72;
     z-index: 4;
     box-shadow: 0 10px 25px rgba(0,0,0,.18);
@@ -529,7 +500,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     filter: brightness(.9);
 }
 
-/* Gallery controls — bigger tap targets on mobile */
+/* Gallery controls — bigger tap targets */
 .pccare-about .gallery-controls {
     display: flex;
     justify-content: center;
@@ -558,7 +529,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     height: 10px;
     border-radius: 50%;
     background: #b9c9d4;
-    transition: .3s;
+    transition: width .3s ease, background .3s ease, border-radius .3s ease;
 }
 
 .pccare-about #project1:checked ~ .gallery-controls label[for="project1"]::before,
@@ -614,7 +585,9 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 
 .pccare-about .card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 0 25px rgba(11,110,168,.35), 0 0 50px rgba(11,110,168,.15);
+    box-shadow:
+        0 0 25px rgba(11,110,168,.35),
+        0 0 50px rgba(11,110,168,.15);
 }
 
 .pccare-about .card h3 {
@@ -669,7 +642,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     border-radius: clamp(16px, 2vw, 25px);
     padding: clamp(26px, 5vw, 70px);
     display: grid;
-    grid-template-columns: minmax(260px, 380px) 1fr;
+    grid-template-columns: minmax(260px, 420px) 1fr;
     gap: clamp(30px, 5vw, 80px);
     align-items: center;
     box-shadow: 0 15px 35px rgba(0,0,0,.08);
@@ -685,7 +658,9 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 
 .pccare-about .leader img:hover {
     transform: scale(1.03);
-    box-shadow: 0 0 25px rgba(11,110,168,.4), 0 0 50px rgba(11,110,168,.2);
+    box-shadow:
+        0 0 25px rgba(11,110,168,.4),
+        0 0 50px rgba(11,110,168,.2);
 }
 
 .pccare-about .leader h3 {
@@ -714,7 +689,12 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
    CTA
 ========================================================= */
 .pccare-about .cta {
-    background: linear-gradient(90deg, #003a5c, #0b6ea8);
+    background:
+        linear-gradient(
+            90deg,
+            #003a5c,
+            #0b6ea8
+        );
     color: #fff;
     text-align: center;
     padding: clamp(50px, 8vw, 100px) clamp(18px, 4vw, 20px);
@@ -763,7 +743,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
         gap: 35px;
     }
     .pccare-about .leader {
-        grid-template-columns: minmax(220px, 300px) 1fr;
+        grid-template-columns: minmax(220px, 320px) 1fr;
         gap: 40px;
     }
     .pccare-about .stat h2 {
@@ -816,10 +796,6 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     }
     .pccare-about .hero {
         padding: 70px 5%;
-    }
-    .pccare-about .hero::after {
-        inset: 6% 3%;
-        border-radius: 18px;
     }
     .pccare-about .hero h1 {
         font-size: clamp(26px, 7vw, 34px);
@@ -929,10 +905,6 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
     .pccare-about .hero {
         padding: 60px 4%;
     }
-    .pccare-about .hero::after {
-        inset: 5% 2.5%;
-        border-radius: 14px;
-    }
     .pccare-about .hero h1 {
         font-size: 24px;
         letter-spacing: -0.3px;
@@ -1006,28 +978,9 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 }
 
 /* =========================================================
-   STATS COUNTER ANIMATION
+   REDUCED MOTION
 ========================================================= */
-.pccare-about .stats .stat-counter {
-    display: inline-block;
-    min-width: 3ch;
-    font-variant-numeric: tabular-nums;
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity .65s ease, transform .65s ease;
-    will-change: opacity, transform;
-}
-
-.pccare-about .stats .stat.is-visible .stat-counter {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 @media (prefers-reduced-motion: reduce) {
-    .pccare-about .stats .stat-counter {
-        transition: none;
-        transform: none;
-    }
     .pccare-about .project-slide,
     .pccare-about .project-slide img {
         transition: none;
@@ -1067,39 +1020,43 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
                 <input type="radio" name="projects" id="project4">
                 <input type="radio" name="projects" id="project5">
 
+                <!-- BHARTIYA BHAVAN -->
                 <label for="project1" class="project-slide" id="slide1">
                     <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/bhartiyabhavan.jpeg"
                          alt="Bhartiya Bhavan CCTV Project"
                          loading="eager" decoding="async" fetchpriority="high">
                     <div class="project-info">
-                        <span class="work-type">CCTV &amp; Surveillance</span>
+                        <span class="work-type">CCTV & Surveillance</span>
                         <h3>Bhartiya Bhavan</h3>
                         <p>CCTV surveillance infrastructure and on-site implementation</p>
                     </div>
                 </label>
 
+                <!-- D Y PATIL -->
                 <label for="project2" class="project-slide" id="slide2">
                     <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/DYPatil_1.png"
                          alt="D Y Patil IT Infrastructure Project"
                          loading="lazy" decoding="async">
                     <div class="project-info">
-                        <span class="work-type">IT &amp; Network Infrastructure</span>
+                        <span class="work-type">IT & Network Infrastructure</span>
                         <h3>D Y Patil</h3>
                         <p>Professional technology infrastructure implementation</p>
                     </div>
                 </label>
 
+                <!-- MSRDC -->
                 <label for="project3" class="project-slide" id="slide3">
                     <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/MSRDC1.jpeg"
                          alt="Audio Visual & Conference Room Solutions"
                          loading="lazy" decoding="async">
                     <div class="project-info">
-                        <span class="work-type">Audio Visual &amp; Conference Room Solutions</span>
+                        <span class="work-type">Audio Visual & Conference Room Solutions</span>
                         <h3>MSRDC</h3>
                         <p>Structured network infrastructure and technical implementation</p>
                     </div>
                 </label>
 
+                <!-- ST ANDREWS -->
                 <label for="project4" class="project-slide" id="slide4">
                     <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/St_Andrews2.png"
                          alt="St Andrews Technology Infrastructure Project"
@@ -1111,6 +1068,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
                     </div>
                 </label>
 
+                <!-- VJTI -->
                 <label for="project5" class="project-slide" id="slide5">
                     <img src="https://raw.githubusercontent.com/agrohdp/web-host/main/VJTI_1.png"
                          alt="VJTI Network Infrastructure Project"
@@ -1123,6 +1081,7 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
                 </label>
             </div>
 
+            <!-- DOT NAVIGATION -->
             <div class="gallery-controls">
                 <label for="project1"></label>
                 <label for="project2"></label>
@@ -1173,19 +1132,19 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 <div class="container">
     <div class="stats-grid">
         <div class="stat">
-            <h2 class="stat-counter" data-target="20" data-suffix="+" aria-label="20+">20+</h2>
+            <h2>20+</h2>
             <p>Years Leadership Experience</p>
         </div>
         <div class="stat">
-            <h2 class="stat-counter" data-target="14" data-suffix="+" aria-label="14+">14+</h2>
+            <h2>14+</h2>
             <p>Years in Business</p>
         </div>
         <div class="stat">
-            <h2 class="stat-counter" data-target="500" data-suffix="+" aria-label="500+">500+</h2>
+            <h2>500+</h2>
             <p>Projects Delivered</p>
         </div>
         <div class="stat">
-            <h2 class="stat-counter" data-target="100" data-suffix="%" aria-label="100%">100%</h2>
+            <h2>100%</h2>
             <p>Client Commitment</p>
         </div>
     </div>
@@ -1224,7 +1183,9 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 </section>
 
 </div>
-</div></div></div>
+
+<script src="assets/js/mobile-menu.js"></script>
+</div></div>
 					</main>
 					<div id="imFooterBg"></div>
 					<footer id="imFooter">
@@ -1289,71 +1250,5 @@ $(function () {$('#imStickyBar_imMenuObject_02_container > ul > li').not('.imMnM
 		</div>
 		
 		<noscript class="imNoScript"><div class="alert alert-red">To use this website you must enable JavaScript.</div></noscript>
-	<script src="assets/js/pc-care-sticky-restore.js"></script>
-
-
-
-<script>
-(function () {
-    'use strict';
-
-    var counters = document.querySelectorAll('.stats .stat-counter');
-    if (!counters.length) return;
-
-    var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    function renderCounter(counter, value) {
-        var target = Number(counter.dataset.target || 0);
-        var suffix = counter.dataset.suffix || '';
-        counter.textContent = Math.min(Math.round(value), target) + suffix;
-    }
-
-    function animateCounter(counter) {
-        if (counter.dataset.animated === 'true') return;
-        counter.dataset.animated = 'true';
-
-        var target = Number(counter.dataset.target || 0);
-        var duration = 1700;
-        var startTime = null;
-
-        if (reducedMotion) {
-            renderCounter(counter, target);
-            counter.closest('.stat').classList.add('is-visible');
-            return;
-        }
-
-        counter.closest('.stat').classList.add('is-visible');
-
-        function step(timestamp) {
-            if (!startTime) startTime = timestamp;
-            var progress = Math.min((timestamp - startTime) / duration, 1);
-            var eased = 1 - Math.pow(1 - progress, 3);
-            renderCounter(counter, target * eased);
-            if (progress < 1) {
-                window.requestAnimationFrame(step);
-            } else {
-                renderCounter(counter, target);
-            }
-        }
-
-        window.requestAnimationFrame(step);
-    }
-
-    if ('IntersectionObserver' in window) {
-        var observer = new IntersectionObserver(function (entries, instance) {
-            entries.forEach(function (entry) {
-                if (entry.isIntersecting) {
-                    animateCounter(entry.target);
-                    instance.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.35 });
-
-        counters.forEach(function (counter) { observer.observe(counter); });
-    } else {
-        counters.forEach(animateCounter);
-    }
-})();
-</script>
-</body>
+	</body>
 </html>
