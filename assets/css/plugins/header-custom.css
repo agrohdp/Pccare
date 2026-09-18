@@ -20,6 +20,7 @@
 	color: rgba(0, 48, 191, 1);
 	font-style: normal !important;
 	font-weight: normal;
+	margin-left: -5px;
 }
 
 /* Loading bar color */
